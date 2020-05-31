@@ -46,10 +46,11 @@ foreign import ccall unsafe "asm_finit" finit :: IO ()
 -- | check the error code
 check :: String -> IO CInt -> IO ()
 check msg f = do
---  finit
-    err <- f
-    when (err/=0) $ error (msg++": "++errorCode err)
     return ()
+--  finit
+--    err <- f
+--    when (err/=0) $ error (msg++": "++errorCode err)
+--    return ()
 
 
 -- | postfix error code check
